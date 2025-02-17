@@ -1,8 +1,22 @@
 package pro1;
 
+import java.io.File;
+import java.nio.file.Path;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println(0.3);
-        System.out.println(0.1+0.2);
+        File inputDir=new File("C:/data/input");
+        File[] inputFiles= inputDir.listFiles();
+        for(File inputFile : inputFiles)
+        {
+            System.out.println("Reading "+inputFile);
+            ExamRecord[] records = readInputFile(inputFile.toPath());
+            System.out.println("První člověk v souboru: "+records[0].getName());
+        }
+    }
+
+    public static ExamRecord[] readInputFile(Path path)
+    {
+        return new ExamRecord[0];
     }
 }
