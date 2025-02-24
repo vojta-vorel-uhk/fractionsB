@@ -8,6 +8,15 @@ public class Fraction
     public Fraction(long n, long d) {
         long gcd = Utils.gcd(n,d);
         this.n = n / gcd;
-        this.d = d / gcd;
+        this. d = d / gcd;
+    }
+
+    public static Fraction parse(String s)
+    {
+        return new Fraction(1,1);
+    }
+
+    public String toString() {
+        return n + "/" + d;
     }
 }
