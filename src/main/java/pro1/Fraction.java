@@ -2,7 +2,7 @@ package pro1;
 
 import java.util.regex.Pattern;
 
-public class Fraction
+public class Fraction extends Number
 {
     long n; // čitatel
     long d; // jmenovatel
@@ -46,5 +46,25 @@ public class Fraction
 
     public String toString() {
         return n + "/" + d;
+    }
+
+    @Override
+    public int intValue() {
+        return (int) (n / d);
+    }
+
+    @Override
+    public long longValue() {
+        return n / d;
+    }
+
+    @Override
+    public float floatValue() {
+        return (float) n / (float) d;
+    }
+
+    @Override
+    public double doubleValue() {
+        return (double) n / (double) d;
     }
 }
